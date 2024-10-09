@@ -1,0 +1,51 @@
+:root {
+  --white: #fff;
+  --black: #000;
+  --darkBlack: #242424;
+  --blue: #3a80e9;
+  --grey: #888;
+  --green: #61c96f;
+  --red: #f94141;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+/* for charts and coin tab */
+.container {
+  width: 100%;
+  /* background-color: var(--darkBlack); */
+  max-width: 1200px;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+/* .chart-container {
+  margin-top: 10px;
+} */
+
+.coinTab {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+select {
+  width: 350px;
+  padding: 10px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+@media (max-width: 768px) {
+  .coinTab {
+    flex-direction: column;
+  }
+}
+@media (max-width:480px) {
+  select{
+    width: 200px;
+  }
+  
+}
