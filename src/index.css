@@ -4,29 +4,37 @@
   --blue: #3a80e9;
   --green: #61c96f;
 }
+
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box; 
 }
-/* for charts and coin tab */
+
+.mainScreen {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; 
+}
+
 .container {
   width: 100%;
-  /* background-color: var(--darkBlack); */
   max-width: 1200px;
   padding: 20px;
   margin: 0 auto;
+  flex: 1; 
 }
 
-/* .chart-container {
-  margin-top: 10px;
-} */
-
+/* Coin tab container */
 .coinTab {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  gap: 20px; 
 }
+
+/* Styling for the select dropdowns */
 select {
   width: 350px;
   padding: 10px;
@@ -34,14 +42,34 @@ select {
   font-size: 16px;
   border: 1px solid #ccc;
   border-radius: 4px;
+  color: var(--black); /
 }
+
+/* Footer style */
+.footer {
+  background-color: var(--black);
+  color: var(--white);
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative; 
+  margin-top: auto; 
+}
+
+/* Media query for tablet and smaller screens */
 @media (max-width: 768px) {
   .coinTab {
-    flex-direction: column;
+    flex-direction: column; 
+    align-items: center; 
   }
 }
+
+/* Media query for small screens like mobile phones */
 @media (max-width: 480px) {
   select {
-    width: 200px;
+    width: 100%; 
+    /* max-width: 300px;  */
   }
 }

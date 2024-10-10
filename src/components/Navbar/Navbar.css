@@ -2,10 +2,12 @@
   display: flex;
   flex-direction: column;
   width: 100vw;
-  height: 70px;
+  min-width: 400px;
+  height: 60px;
   background-color: var(--black);
   color: var(--white);
-  justify-content: space-between;
+  justify-content: center;
+  /* align-items: center; */
 }
 
 .logo{

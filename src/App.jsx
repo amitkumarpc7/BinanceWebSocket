@@ -20,19 +20,21 @@ const App = () => {
   }, [selectedCoin]);
   return (
     <>
-      <Navbar />
-      <div className="container">
-        <div className="coinTab">
-          {/* for Selecting Coins and Setting interval */}
-          <CryptoSelector setSelectedCoin={setSelectedCoin} />
-          <TimeFrameSelector setInterval={setInterval} />
+      <div className="mainScreen">
+        <Navbar />
+        <div className="container">
+          <div className="coinTab">
+            {/* for Selecting Coins and Setting interval */}
+            <CryptoSelector setSelectedCoin={setSelectedCoin} />
+            <TimeFrameSelector setInterval={setInterval} />
+          </div>
+          {/* for Charts */}
+          <div className="chart-container">
+            <CandlestickChart symbol={selectedCoin} interval={interval} />
+          </div>
         </div>
-        {/* for Charts */}
-        <div className="chart-container">
-          <CandlestickChart symbol={selectedCoin} interval={interval} />
-        </div>
+        <Footer />
       </div>
-      <Footer />
     </>
   );
 };
