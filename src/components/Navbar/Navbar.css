@@ -1,13 +1,12 @@
 .navbar {
   display: flex;
   flex-direction: column;
-  height: 50px;
+  height: 70px;
   background-color: var(--black);
   color: var(--white);
   justify-content: space-between;
 }
 
-.coinTab {
-  display: flex;
-  flex-direction: column;
+.logo{
+    padding: 5px;
 }

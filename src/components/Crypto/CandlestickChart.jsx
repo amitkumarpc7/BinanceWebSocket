@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
 import useBinanceWebSocket from "../hooks/useBinanceWebSocket";
 import { Line } from "react-chartjs-2";
+// for chart js v3 and above we need to explicitly import the components
 import {
   Chart as ChartJS,
   CategoryScale,
-  LinearScale, 
+  LinearScale,
   PointElement,
   LineElement,
   Title,
@@ -14,7 +15,7 @@ import {
 
 ChartJS.register(
   CategoryScale,
-  LinearScale, 
+  LinearScale,
   PointElement,
   LineElement,
   Title,
@@ -23,6 +24,7 @@ ChartJS.register(
 );
 
 const CandlestickChart = ({ symbol, interval }) => {
+  // using the hook we created to fetch data from web socket
   const candlestickData = useBinanceWebSocket(symbol, interval);
   const [chartData, setChartData] = useState({
     labels: [],
@@ -35,7 +37,7 @@ const CandlestickChart = ({ symbol, interval }) => {
       },
     ],
   });
-
+  // For dynamically creating charts
   useEffect(() => {
     const times = candlestickData.map((candle) =>
       new Date(candle.time).toLocaleTimeString()

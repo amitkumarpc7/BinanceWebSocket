@@ -4,12 +4,12 @@ const useBinanceWebSocket = (symbol, interval) => {
   const [candlestickData, setCandlestickData] = useState([]);
 
   useEffect(() => {
-    console.log('Symbol',symbol);
-    console.log("Interval",interval)
+    // console.log('Symbol',symbol);
+    // console.log("Interval",interval)
     const ws = new WebSocket(
       `wss://stream.binance.com:9443/ws/${symbol}@kline_${interval}`
     );
-    console.log(ws);
+    // console.log(ws);
     ws.onmessage = (event) => {
       const data = JSON.parse(event.data);
       const candlestick = data.k;

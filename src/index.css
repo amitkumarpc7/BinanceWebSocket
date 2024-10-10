@@ -1,11 +1,8 @@
 :root {
   --white: #fff;
-  --black: #000;
-  --darkBlack: #242424;
+  --black: #242424;
   --blue: #3a80e9;
-  --grey: #888;
   --green: #61c96f;
-  --red: #f94141;
 }
 * {
   margin: 0;
@@ -43,9 +40,8 @@ select {
     flex-direction: column;
   }
 }
-@media (max-width:480px) {
-  select{
+@media (max-width: 480px) {
+  select {
     width: 200px;
   }
-  
 }

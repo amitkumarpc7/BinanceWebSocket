@@ -1,3 +1,4 @@
+// FOR storing data in Local Storage
 export const persistData = (symbol, data) => {
   localStorage.setItem(symbol, JSON.stringify(data));
   console.log(symbol);

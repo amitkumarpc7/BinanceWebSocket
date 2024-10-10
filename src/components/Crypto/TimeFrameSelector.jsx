@@ -1,9 +1,9 @@
 import React from "react";
 
-const TimeFrameSelector = ({setInterval}) => {
-    const handleTime=(event)=>{
-        setInterval(event.target.value);
-    }
+const TimeFrameSelector = ({ setInterval }) => {
+  const handleTime = (event) => {
+    setInterval(event.target.value);
+  };
   return (
     <div>
       <select onChange={handleTime}>
